@@ -1,16 +1,7 @@
 ﻿# Publish ALL RSI packages in GitHub Packages
 name: Publish Rsi packages
 
-on:
-  pull_request:
-    branches:
-      - 'develop'
-      - 'main'
-  push:
-    branches:
-      - 'develop'
-      - 'main'
-      - 'feature/**' #only for testing
+on: push
 
 env:
   DOTNET_VERSION: '6.x.x'
