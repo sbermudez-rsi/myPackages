@@ -23,3 +23,5 @@ jobs:
   Package-Rsi-Core:
     name: 'Publish SayHi'
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
