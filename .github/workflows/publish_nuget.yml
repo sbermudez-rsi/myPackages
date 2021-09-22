@@ -1,0 +1,25 @@
+﻿# Publish ALL RSI packages in GitHub Packages
+name: Publish Rsi packages
+
+on:
+  pull_request:
+    branches:
+      - 'develop'
+      - 'main'
+  push:
+    branches:
+      - 'develop'
+      - 'main'
+      - 'feature/**' #only for testing
+
+env:
+  DOTNET_VERSION: '6.x.x'
+  PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
+  NUGET_SOURCE_URL: 'https://nuget.pkg.github.com/revenue-solutions-inc/index.json'
+  PATH_NUGET: 'SayHi.csproj'
+
+
+jobs:
+  Package-Rsi-Core:
+    name: 'Publish SayHi'
+    runs-on: ubuntu-latest
