@@ -26,7 +26,7 @@ jobs:
 
       # Dotne nuget add source
       - name: 'Nuget Add Source'
-        run: dotnet nuget add source --username @sbermudez-rsi --password ${{secrets.TOKEN_SERGIO}} --store-password-in-clear-text --name 'github' '${{env.NUGET_SOURCE_URL}}'
+        run: dotnet nuget add source --username @sbermudez-rsi --password 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 --store-password-in-clear-text --name 'github' '${{env.NUGET_SOURCE_URL}}'
 
       # Restore Packages
       - name: 'Restore Packages SayHi'
