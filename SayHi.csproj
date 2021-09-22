@@ -3,14 +3,16 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageId>SayHi</PackageId>
+	<Authors>Sergio/Alfredo</Authors>
+	<PackageProjectUrl>https://github.com/sbermudez-rsi/myPackages</PackageProjectUrl>
     <RepositoryUrl>https://github.com/sbermudez-rsi/myPackages</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	<Description>Say hello!!!</Description>
-    <Nullable>enable</Nullable>
+	<PackageTags>MyTags</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

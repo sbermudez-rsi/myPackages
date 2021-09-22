@@ -26,7 +26,7 @@ jobs:
 
       # Dotne nuget add source
       - name: 'Nuget Add Source'
-        run: dotnet nuget add source --username @sbermudez-rsi --password ${{secrets.GITHUB_TOKEN}} --store-password-in-clear-text --name 'github' '${{env.NUGET_SOURCE_URL}}'
+        run: dotnet nuget add source --username @sbermudez-rsi --password ${{secrets.TOKEN_SERGIO}} --store-password-in-clear-text --name 'github' '${{env.NUGET_SOURCE_URL}}'
 
       # Restore Packages
       - name: 'Restore Packages SayHi'
@@ -40,5 +40,5 @@ jobs:
       # Push the package
       - name: 'Push Package SayHi'
         run: |
-          dotnet nuget push '${{env.PACKAGE_OUTPUT_DIRECTORY}}/*.nupkg' -s 'github' --api-key ${{secrets.GITHUB_TOKEN}} --skip-duplicate
+          dotnet nuget push '${{env.PACKAGE_OUTPUT_DIRECTORY}}/*.nupkg' -s 'github' --api-key ${{secrets.TOKEN_SERGIO}} --skip-duplicate
           rm output/*.*
