@@ -3,12 +3,27 @@ on:
   push:
     branches:
       - master # Default release branch
+
+env:
+  DOTNET_VERSION: '6.x.x'
+  PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
+  NUGET_SOURCE_URL: 'https://nuget.pkg.github.com/sbermudez-rsi'
+  PATH_NUGET: 'SayHi.csproj'
+  NUGET_KEY: ${{secrets.GITHUB_TOKEN}}
+
 jobs:
   publish:
     name: build, pack & publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      # Install DotNet X SDK
+      - name: 'Install dotnet'
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '${{env.DOTNET_VERSION}}'
+          include-prerelease: true
 
       # Publish
       - name: publish on version change
