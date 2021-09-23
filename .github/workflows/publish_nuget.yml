@@ -8,7 +8,7 @@ env:
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
   NUGET_SOURCE_URL: 'https://nuget.pkg.github.com/sbermudez-rsi/index.json'
   PATH_NUGET: 'SayHi.csproj'
-
+  NUGET_KEY: ${{secrets.GITHUB_TOKEN}}
 
 jobs:
   Package-Rsi-Core:
@@ -23,6 +23,8 @@ jobs:
         with:
           # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: ${{env.PATH_NUGET}}
+          NUGET_SOURCE: ${{env.NUGET_SOURCE_URL}}
+          NUGET_KEY: ${{env.NUGET_KEY}}
 
       # Install DotNet X SDK
       - name: 'Install dotnet'
