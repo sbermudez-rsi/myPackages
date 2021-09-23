@@ -33,7 +33,7 @@ inputs:
     NUGET_SOURCE:
         description: NuGet server uri hosting the packages
         required: false
-        default: https://github.com/sbermudez-rsi
+        default: https://nuget.pkg.github.com/sbermudez-rsi
     INCLUDE_SYMBOLS:
         description: Flag to toggle pushing symbols along with nuget package to the server, disabled by default
         required: false
