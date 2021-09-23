@@ -94,7 +94,7 @@ class Action {
 
         console.log(`Package Name: ${this.packageName}`)
 
-        https.get(`${this.nugetSource}/${this.packageName}/index.json`, res => {
+        https.get(`${this.nugetSource}/v3-flatcontainer/${this.packageName}/index.json`, res => {
             let body = ""
 
             console.log(`URL: ${this.nugetSource}/${this.packageName}/index.json`)
