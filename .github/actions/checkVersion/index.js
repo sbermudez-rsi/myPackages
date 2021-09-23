@@ -97,6 +97,7 @@ class Action {
         https.get(`${this.nugetSource}/${this.packageName}/index.json`, res => {
             let body = ""
 
+            console.log(`URL: ${this.nugetSource}/${this.packageName}/index.json`)
             console.log(`INDEX STATUS CODE: ${res.statusCode}`)
 
             if (res.statusCode == 404)
