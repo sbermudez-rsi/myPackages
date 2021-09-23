@@ -6,7 +6,7 @@ on: push
 env:
   DOTNET_VERSION: '6.x.x'
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
-  NUGET_SOURCE_URL: 'https://nuget.pkg.github.com/sbermudez-rsi/index.json'
+  NUGET_SOURCE_URL: 'https://nuget.pkg.github.com/sbermudez-rsi'
   PATH_NUGET: 'SayHi.csproj'
   NUGET_KEY: ${{secrets.GITHUB_TOKEN}}
 
