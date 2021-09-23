@@ -46,6 +46,6 @@ jobs:
         run: dotnet pack ${{env.PATH_NUGET}} --no-restore --no-build --configuration Release --include-symbols --output ${{env.PACKAGE_OUTPUT_DIRECTORY}}
       # Push the package
       - name: 'Push Package SayHi'
-        run: |
-          dotnet nuget push '${{env.PACKAGE_OUTPUT_DIRECTORY}}/*.nupkg' -s 'github' --api-key ${{secrets.TOKEN_SERGIO}} --skip-duplicate
+        run: |                    
+          dotnet nuget push '${{env.PACKAGE_OUTPUT_DIRECTORY}}/*.nupkg' -s 'github' --api-key ${{secrets.GITHUB_TOKEN}} --skip-duplicate
           rm output/*.*
