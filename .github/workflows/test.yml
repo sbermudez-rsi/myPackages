@@ -34,6 +34,7 @@ jobs:
         run: |
           curl -H "Accept: application/vnd.github.v3+json" https://nuget.pkg.github.com/sbermudez-rsi/myPackages/index.json --output package.json
           ls
+          cat package.json
 
       # Publish
       - name: publish on version change
