@@ -29,8 +29,7 @@ inputs:
         default: v*
     NUGET_KEY:
         description: API key to authenticate with NuGet server
-        required: false
-        default: ${{secrets.GITHUB_TOKEN}}
+        required: false        
     NUGET_SOURCE:
         description: NuGet server uri hosting the packages
         required: false
