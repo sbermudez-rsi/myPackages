@@ -30,7 +30,7 @@ inputs:
     NUGET_KEY:
         description: API key to authenticate with NuGet server
         required: false
-        default: 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
+        default: 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
     NUGET_SOURCE:
         description: NuGet server uri hosting the packages
         required: false
