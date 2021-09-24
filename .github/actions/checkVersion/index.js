@@ -1,10 +1,11 @@
 const os = require("os"),
     fs = require("fs"),
     path = require("path"),
-    https = require("https"),
-    Octokit = require("@octokit/core"),
+    https = require("https"),    
     spawnSync = require("child_process").spawnSync
 
+
+const { Octokit } = require("@octokit/rest");
 class Action {
     constructor() {
         this.projectFile = process.env.INPUT_PROJECT_FILE_PATH
@@ -95,7 +96,7 @@ class Action {
 
         console.log(`Package Name: ${this.packageName}`)
 
-        const octokit = new Octokit({ auth: `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` });
+        const octokit = new Octokit({ auth: `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` });
 
         const { data } = octokit.rest.repos.getContent({
             mediaType: {
