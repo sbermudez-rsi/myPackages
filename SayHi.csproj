@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageId>SayHi</PackageId>
 	<Authors>Sergio/Alfredo</Authors>
 	<PackageProjectUrl>https://github.com/sbermudez-rsi/myPackages</PackageProjectUrl>
