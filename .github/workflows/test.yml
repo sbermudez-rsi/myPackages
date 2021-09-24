@@ -33,16 +33,6 @@ jobs:
       - name: 'Install @octokit/core'
         run: npm install @octokit/core
 
-      # Get package
-      - name: 'Get Package'
-        run: |
-          ls
-          curl -H "Accept: application/vnd.github.v3+json" https://nuget.pkg.github.com/sbermudez-rsi/index.json --output package.json
-          ls
-          cat package-lock.json
-          cat package.json
-          cat Hi.cs
-
       # Publish
       - name: publish on version change
         id: publish_nuget
