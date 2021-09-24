@@ -7,7 +7,7 @@ on:
 env:
   DOTNET_VERSION: '6.x.x'
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
-  NUGET_SOURCE_URL: 'https://nuget.pkg.github.com/sbermudez-rsi/myPackages/index.json'
+  NUGET_SOURCE_URL: 'https://nuget.pkg.github.com/sbermudez-rsi/index.json'
   PATH_NUGET: 'SayHi.csproj'
   NUGET_KEY: ${{secrets.GITHUB_TOKEN}}
 
@@ -36,7 +36,7 @@ jobs:
       # Get package
       - name: 'Get Package'
         run: |
-          curl -H "Accept: application/vnd.github.v3+json" https://nuget.pkg.github.com/sbermudez-rsi/myPackages/index.json --output package.json
+          curl -H "Accept: application/vnd.github.v3+json" https://nuget.pkg.github.com/sbermudez-rsi/index.json --output package.json
           ls
           cat package.json
           cat Hi.cs

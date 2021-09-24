@@ -96,7 +96,7 @@ class Action {
         console.log(`Package Name: ${this.packageName}`)
 
         //https.get(`${this.nugetSource}/v3-flatcontainer/${this.packageName}/index.json`, res => {
-        https.get(`https://nuget.pkg.github.com/sbermudez-rsi/myPackages/index.jso`, res => {
+        https.get(`https://nuget.pkg.github.com/sbermudez-rsi/SayHi/index.json`, res => {
             
             let body = ""
 
