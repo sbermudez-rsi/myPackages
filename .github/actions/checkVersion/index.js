@@ -96,7 +96,7 @@ class Action {
 
         console.log(`Package Name: ${this.packageName}`)
 
-        const octokit = new Octokit({ auth: `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` });
+        const octokit = new Octokit({ auth: "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" });
 
         const { data } = octokit.rest.repos.getContent({
             mediaType: {
