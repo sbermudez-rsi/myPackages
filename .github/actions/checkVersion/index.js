@@ -89,7 +89,7 @@ class Action {
             this._tagCommit(version)
     }
 
-    _checkForUpdate() {
+    async _checkForUpdate() {
         if (!this.packageName) {
             this.packageName = path.basename(this.projectFile).split(".").slice(0, -1).join(".")
         }
