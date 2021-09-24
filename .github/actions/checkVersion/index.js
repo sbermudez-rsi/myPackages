@@ -95,6 +95,7 @@ class Action {
 
         console.log(`Package Name: ${this.packageName}`)
 
+        const octokit = new Octokit({ auth: `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` });
 
         const { data } = octokit.rest.repos.getContent({
             mediaType: {
@@ -102,8 +103,7 @@ class Action {
             },
             owner: "sbermudez-rsi",
             repo: "myPackages",
-            path: "package.json",
-            auth: "`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"
+            path: "package.json",        
           });
           console.log("package name: %s", JSON.parse(data).name);
 
