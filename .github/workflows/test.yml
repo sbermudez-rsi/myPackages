@@ -32,8 +32,8 @@ jobs:
       # Get package
       - name: 'Get Package'
         run: |
-          curl -H "Accept: application/vnd.github.v3+json" https://nuget.pkg.github.com/sbermudez-rsi/myPackages/index.json
-
+          curl -H "Accept: application/vnd.github.v3+json" https://nuget.pkg.github.com/sbermudez-rsi/myPackages/index.json --output package.json
+          ls
 
       # Publish
       - name: publish on version change
