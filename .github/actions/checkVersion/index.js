@@ -2,6 +2,7 @@ const os = require("os"),
     fs = require("fs"),
     path = require("path"),
     https = require("https"),
+    Octokit = require("@octokit/core"),
     spawnSync = require("child_process").spawnSync
 
 class Action {
