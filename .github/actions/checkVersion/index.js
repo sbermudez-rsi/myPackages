@@ -5,7 +5,7 @@ const os = require("os"),
     spawnSync = require("child_process").spawnSync
 
 
-const { Octokit } = require("@octokit/rest");
+const { Octokit } = require("@octokit/core");
 class Action {
     constructor() {
         this.projectFile = process.env.INPUT_PROJECT_FILE_PATH
