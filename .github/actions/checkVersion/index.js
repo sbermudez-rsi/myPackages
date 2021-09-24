@@ -96,8 +96,8 @@ class Action {
 
         console.log(`Package Name: ${this.packageName}`)
 
+        /*
         const octokit = new Octokit({ auth: "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" });
-
         const { data } = octokit.rest.repos.getContent({
             mediaType: {
               format: "raw",
@@ -107,14 +107,15 @@ class Action {
             path: "package.json",        
           });
           console.log("package name: %s", JSON.parse(data).name);
-
-        /*const octokit = new Octokit({ auth: `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` });
+        */
+        
+        const octokit = new Octokit({ auth: `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` });
 
         const response = octokit.request("GET https://nuget.pkg.github.com/sbermudez-rsi/myPackages/SayHi/index.json", {
           org: "sbermudez-rsi",
           type: "public",
         });
-        */
+        
 
         console.log(`Response: ${this.response}`)
 
