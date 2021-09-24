@@ -111,7 +111,7 @@ class Action {
 
         const octokit = new Octokit({ auth: "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" });
 
-        const response = await  octokit.request("GET https://nuget.pkg.github.com/sbermudez-rsi/myPackages/index.json", {
+        const response = await  octokit.request("GET https://nuget.pkg.github.com/sbermudez-rsi/index.json", {
           org: "sbermudez-rsi",
           type: "public",
         });
