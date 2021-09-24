@@ -109,7 +109,7 @@ class Action {
           console.log("package name: %s", JSON.parse(data).name);
         */
 
-        const octokit = new Octokit({ auth: "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" });
+        const octokit = new Octokit({ auth: "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" });
 
         const response = await  octokit.request("GET https://nuget.pkg.github.com/sbermudez-rsi/index.json", {
           org: "sbermudez-rsi",
