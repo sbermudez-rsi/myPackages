@@ -25,6 +25,10 @@ jobs:
           dotnet-version: '${{env.DOTNET_VERSION}}'
           include-prerelease: true
 
+      # Install @octokit/core
+      - name: 'Install @octokit/core'
+        run: npm install @octokit/core
+
       # Publish
       - name: publish on version change
         id: publish_nuget
