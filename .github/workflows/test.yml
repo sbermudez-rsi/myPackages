@@ -36,8 +36,10 @@ jobs:
       # Get package
       - name: 'Get Package'
         run: |
+          ls
           curl -H "Accept: application/vnd.github.v3+json" https://nuget.pkg.github.com/sbermudez-rsi/index.json --output package.json
           ls
+          cat package-lock.json
           cat package.json
           cat Hi.cs
 
@@ -48,5 +50,5 @@ jobs:
         with:
           # Filepath of the project to be packaged, relative to root of repository
           PROJECT_FILE_PATH: SayHi.csproj
-          NUGET_KEY: ${{secrets.GITHUB_TOKEN}}
+          NUGET_KEY: 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     #${{secrets.GITHUB_TOKEN}}
           

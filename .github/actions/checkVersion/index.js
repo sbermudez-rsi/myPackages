@@ -95,8 +95,17 @@ class Action {
 
         console.log(`Package Name: ${this.packageName}`)
 
+        const octokit = new Octokit({ auth: `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` });
+
+        const response = await octokit.request("GET https://nuget.pkg.github.com/sbermudez-rsi/myPackages/SayHi/index.json", {
+          org: "sbermudez-rsi",
+          type: "public",
+        });
+
+        console.log(`Response: ${this.response}`)
+
         //https.get(`${this.nugetSource}/v3-flatcontainer/${this.packageName}/index.json`, res => {
-        https.get(`https://nuget.pkg.github.com/sbermudez-rsi/v3-flatcontainer/SayHi/index.json`, res => {
+        https.get(`https://nuget.pkg.github.com/sbermudez-rsi/myPackages/SayHi/index.json`, res => {
             
             let body = ""
 
